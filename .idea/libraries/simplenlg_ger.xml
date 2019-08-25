@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="simplenlg-ger">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/simplenlg-ger.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

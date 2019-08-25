@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE Lexicon [
+<!ELEMENT Lexicon (Nouns?, Adjectives?, Verbs?)>
+
+<!ELEMENT Nouns (noun)*>
+<!ELEMENT noun (stem, (suffix|form), (suffix|form)+)>
+<!ATTLIST noun
+  id     ID                          #REQUIRED
+  gender (masculine|feminine|neuter) "neuter"
+>
+
+<!ELEMENT Adjectives (adjective)*>
+<!ELEMENT adjective (stem, comp, super)>
+<!ATTLIST adjective
+  id       ID            #REQUIRED
+  elision  (true|false)  "false"
+>
+
+<!ELEMENT Verbs (verb)*>
+<!ELEMENT verb (stem, past?, part?, alt-sg?, subj2?)>
+<!ATTLIST verb
+  id	      ID            #REQUIRED
+  aux	      (haben|sein)  "haben"
+  inflection  CDATA         #IMPLIED
+>
+
+<!ELEMENT stem   (#PCDATA)>
+<!ELEMENT comp   (#PCDATA)>
+<!ELEMENT super  (#PCDATA)>
+<!ELEMENT past   (#PCDATA)>
+<!ELEMENT part   (#PCDATA)>
+<!ELEMENT alt-sg (#PCDATA)>
+<!ELEMENT subj2  (#PCDATA)>
+<!ELEMENT suffix (#PCDATA)>
+<!ATTLIST suffix
+  case  (nom|acc|gen|dat)  #REQUIRED
+  num   (sg|pl)            #REQUIRED
+>
+
+<!ELEMENT form   (#PCDATA)>
+<!ATTLIST form
+  case  (nom|acc|gen|dat)  #REQUIRED
+  num   (sg|pl)            #REQUIRED
+>
+
+]>
+
+<Lexicon>
+	<Nouns>
+		<noun id="M60" gender="masculine">
+			<stem>Kuchen</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl"></suffix>
+		</noun>
+		<noun id="M59" gender="masculine">
+			<stem>Ball</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">$e</suffix>
+		</noun>
+		<noun id="M58" gender="feminine">
+			<stem>Möglichkeit</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">en</suffix>
+		</noun>
+		<noun id="I57" gender="masculine">
+			<stem>Bau</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">ten</suffix>
+		</noun>
+		<noun id="I56" gender="masculine">
+			<stem>Wert</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">e</suffix>
+		</noun>
+		<noun id="I55" gender="feminine">
+			<stem>CD</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">s</suffix>
+		</noun>
+		<noun id="I54" gender="neuter">
+			<stem>Kleid</stem>
+			<suffix case="gen" num="sg">es</suffix>
+			<suffix case="nom" num="pl">er</suffix>
+		</noun>
+		<noun id="I59" gender="masculine">
+			<stem>Bauer</stem>
+			<suffix case="gen" num="sg">n</suffix>
+			<suffix case="nom" num="pl">n</suffix>
+		</noun>
+		<noun id="I58" gender="masculine">
+			<stem>Ball</stem>
+			<suffix case="gen" num="sg">es</suffix>
+			<suffix case="nom" num="pl">$e</suffix>
+		</noun>
+		<noun id="I12" gender="masculine">
+			<stem>Apfel</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">$</suffix>
+		</noun>
+		<noun id="I13" gender="feminine">
+			<stem>Linguistik</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">en</suffix>
+		</noun>
+		<noun id="I10" gender="feminine">
+			<stem>Hoffnung</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">en</suffix>
+		</noun>
+		<noun id="I11" gender="neuter">
+			<stem>Praktikum</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<form case="nom" num="pl">Praktika</form>
+		</noun>
+		<noun id="I16" gender="feminine">
+			<stem>Sprachwissenschaft</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">en</suffix>
+		</noun>
+		<noun id="I53" gender="masculine">
+			<stem>Laden</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">$</suffix>
+		</noun>
+		<noun id="I17" gender="feminine">
+			<stem>Mutter</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">$</suffix>
+		</noun>
+		<noun id="I52" gender="masculine">
+			<stem>Wald</stem>
+			<suffix case="gen" num="sg">es</suffix>
+			<suffix case="nom" num="pl">$er</suffix>
+		</noun>
+		<noun id="I14" gender="masculine">
+			<stem>Mann</stem>
+			<suffix case="gen" num="sg">es</suffix>
+			<suffix case="nom" num="pl">$er</suffix>
+		</noun>
+		<noun id="I51" gender="masculine">
+			<stem>Hund</stem>
+			<suffix case="gen" num="sg">es</suffix>
+			<suffix case="nom" num="pl">e</suffix>
+		</noun>
+		<noun id="I15" gender="feminine">
+			<stem>Grenze</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">n</suffix>
+		</noun>
+		<noun id="I9000" gender="masculine" adjectiveflexion="true">
+			<stem>Beamte</stem>
+		</noun>
+		<noun id="I9001" gender="masculine" fixedplural="true">
+			<stem>Eltern</stem>
+		</noun>
+		<noun id="I50" gender="neuter">
+			<stem>Fenster</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl"></suffix>
+		</noun>
+		<noun id="I19" gender="neuter">
+			<stem>Geheimnis</stem>
+			<suffix case="gen" num="sg">ses</suffix>
+			<suffix case="nom" num="pl">se</suffix>
+		</noun>
+		<noun id="I18" gender="masculine">
+			<stem>Baum</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">$e</suffix>
+		</noun>
+		<noun id="I44" gender="neuter">
+			<stem>Training</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">s</suffix>
+		</noun>
+		<noun id="I43" gender="neuter">
+			<stem>Herz</stem>
+			<suffix case="acc" num="sg"></suffix>
+			<suffix case="gen" num="sg">ens</suffix>
+			<suffix case="dat" num="sg">en</suffix>
+			<suffix case="nom" num="pl">en</suffix>
+			<suffix case="dat" num="pl">en</suffix>
+		</noun>
+		<noun id="I46" gender="masculine">
+			<stem>Tag</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">e</suffix>
+		</noun>
+		<noun id="I45" gender="feminine">
+			<stem>Wissenschaft</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">en</suffix>
+		</noun>
+		<noun id="I48" gender="masculine">
+			<stem>Boden</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">$</suffix>
+		</noun>
+		<noun id="I47" gender="masculine">
+			<stem>Zug</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">$</suffix>
+		</noun>
+		<noun id="I40" gender="neuter">
+			<stem>Chaos</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl"></suffix>
+		</noun>
+		<noun id="I42" gender="masculine">
+			<stem>Name</stem>
+			<suffix case="acc" num="sg">n</suffix>
+			<suffix case="gen" num="sg">ns</suffix>
+			<suffix case="dat" num="sg">n</suffix>
+			<suffix case="nom" num="pl">n</suffix>
+			<suffix case="dat" num="pl">n</suffix>
+		</noun>
+		<noun id="I41" gender="neuter">
+			<stem>Tempo</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<form case="nom" num="pl">Tempi</form>
+		</noun>
+		<noun id="I30" gender="feminine">
+			<stem>Bahn</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">en</suffix>
+		</noun>
+		<noun id="I31" gender="neuter">
+			<stem>Spielzeug</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">e</suffix>
+		</noun>
+		<noun id="I38" gender="neuter">
+			<stem>Stück</stem>
+			<suffix case="gen" num="sg">es</suffix>
+			<suffix case="nom" num="pl">e</suffix>
+		</noun>
+		<noun id="I39" gender="neuter">
+			<stem>Gleis</stem>
+			<suffix case="gen" num="sg">es</suffix>
+			<suffix case="nom" num="pl">e</suffix>
+		</noun>
+		<noun id="I36" gender="masculine">
+			<stem>PC</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">s</suffix>
+		</noun>
+		<noun id="I37" gender="feminine">
+			<stem>Treppe</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">n</suffix>
+		</noun>
+		<noun id="I34" gender="feminine">
+			<stem>Stunde</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">n</suffix>
+		</noun>
+		<noun id="I35" gender="masculine">
+			<stem>Alarm</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">e</suffix>
+		</noun>
+		<noun id="I32" gender="feminine">
+			<stem>Stadt</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">$e</suffix>
+		</noun>
+		<noun id="I33" gender="feminine">
+			<stem>Sekunde</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">n</suffix>
+		</noun>
+		<noun id="I20" gender="feminine">
+			<stem>Minute</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">n</suffix>
+		</noun>
+		<noun id="I62" gender="neuter">
+			<stem>Bild</stem>
+			<suffix case="gen" num="sg">es</suffix>
+			<suffix case="nom" num="pl">er</suffix>
+		</noun>
+		<noun id="I25" gender="neuter">
+			<stem>Buch</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">$er</suffix>
+		</noun>
+		<noun id="I61" gender="neuter">
+			<stem>Auge</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">n</suffix>
+		</noun>
+		<noun id="I26" gender="feminine">
+			<stem>Herangehensweise</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">n</suffix>
+		</noun>
+		<noun id="I64" gender="feminine">
+			<stem>Frau</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">en</suffix>
+		</noun>
+		<noun id="I27" gender="feminine">
+			<stem>Sprache</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">n</suffix>
+		</noun>
+		<noun id="I63" gender="masculine">
+			<stem>Kreis</stem>
+			<suffix case="gen" num="sg">es</suffix>
+			<suffix case="nom" num="pl">e</suffix>
+		</noun>
+		<noun id="I28" gender="neuter">
+			<stem>Museum</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<form case="nom" num="pl">Museen</form>
+		</noun>
+		<noun id="I21" gender="neuter">
+			<stem>Schaf</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">e</suffix>
+		</noun>
+		<noun id="I22" gender="masculine">
+			<stem>Mensch</stem>
+			<suffix case="gen" num="sg">en</suffix>
+			<suffix case="nom" num="pl">en</suffix>
+		</noun>
+		<noun id="I60" gender="feminine">
+			<stem>Freude</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">n</suffix>
+		</noun>
+		<noun id="I23" gender="feminine">
+			<stem>Frucht</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">$e</suffix>
+		</noun>
+		<noun id="I24" gender="feminine">
+			<stem>Birne</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">n</suffix>
+		</noun>
+		<noun id="I29" gender="neuter">
+			<stem>Kind</stem>
+			<suffix case="gen" num="sg">es</suffix>
+			<suffix case="nom" num="pl">er</suffix>
+		</noun>
+		<noun id="F1" gender="feminine">
+			<stem>Kündigung</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">en</suffix>
+		</noun>
+		<noun id="F2" gender="feminine">
+			<stem>Behörde</stem>
+			<suffix case="gen" num="sg"></suffix>
+			<suffix case="nom" num="pl">n</suffix>
+		</noun>
+		<noun id="F3" gender="masculine">
+			<stem>Unsinn</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">e</suffix>
+		</noun>
+		<noun id="F4" gender="neuter">
+			<stem>Tor</stem>
+			<suffix case="gen" num="sg">s</suffix>
+			<suffix case="nom" num="pl">e</suffix>
+		</noun>
+	</Nouns>
+	<Adjectives>
+		<adjective id="F70">
+		<stem>lecker</stem>
+		<comp>leckerer</comp>
+		<super>leckersten</super>
+		</adjective>
+		<adjective id="I69">
+			<stem>hübsch</stem>
+			<comp>hübscher</comp>
+			<super>hübscheste</super>
+		</adjective>
+		<adjective id="I66">
+			<stem>klein</stem>
+			<comp>kleiner</comp>
+			<super>kleinste</super>
+		</adjective>
+		<adjective id="I65">
+			<stem>verschieden</stem>
+			<comp>verschiedener</comp>
+			<super>verschiedenste</super>
+		</adjective>
+		<adjective id="I68">
+			<stem>interdisziplinär</stem>
+			<comp>interdisziplinärer</comp>
+			<super>interdisziplinärste</super>
+		</adjective>
+		<adjective id="I67">
+			<stem>menschlich</stem>
+			<comp>menschlicher</comp>
+			<super>menschlichste</super>
+		</adjective>
+		<adjective id="I75" elision="true">
+			<stem>teuer</stem>
+			<comp>teurer</comp>
+			<super>teuerste</super>
+		</adjective>
+		<adjective id="I74">
+			<stem>schön</stem>
+			<comp>schöner</comp>
+			<super>schönste</super>
+		</adjective>
+		<adjective id="I73">
+			<stem>lang</stem>
+			<comp>länger</comp>
+			<super>längste</super>
+		</adjective>
+		<adjective id="I72">
+			<stem>schlau</stem>
+			<comp>schlauer</comp>
+			<super>schlauste</super>
+		</adjective>
+		<adjective id="I71">
+			<stem>groß</stem>
+			<comp>größer</comp>
+			<super>größte</super>
+		</adjective>
+		<adjective id="I70">
+			<stem>intelligent</stem>
+			<comp>intelligenter</comp>
+			<super>intelligenteste</super>
+		</adjective>
+	</Adjectives>
+	<Verbs>
+		<verb id="F12" inflection="alt. imperative">
+			<stem>hinterziehen</stem>
+			<past>hinterzog</past>
+			<part>hinterzogen</part>
+			<alt-sg>hinterzieh</alt-sg>
+			<subj2>hinterzög</subj2>
+		</verb>
+        <verb id="F11" inflection="alt. imperative">
+            <stem>befehlen</stem>
+            <past>befahl</past>
+            <part>befohlen</part>
+            <alt-sg>befiehl</alt-sg>
+            <subj2>beföhl</subj2>
+        </verb>
+		<verb id="I999" inflection="alt. imperative">
+			<stem>sitzen</stem>
+			<past>saß</past>
+			<part>gesessen</part>
+			<alt-sg>sitz</alt-sg>
+			<subj2>säß</subj2>
+		</verb>
+		<verb id="I90" inflection="alt. imperative">
+			<stem>lesen</stem>
+			<past>las</past>
+			<part>gelesen</part>
+			<alt-sg>lies</alt-sg>
+			<subj2>läs</subj2>
+		</verb>
+		<verb id="I91" aux="sein">
+			<stem>gehen</stem>
+			<past>ging</past>
+			<part>gegangen</part>
+		</verb>
+		<verb id="I92" inflection="epenthesis">
+			<stem>baden</stem>
+			<past>badete</past>
+			<part>gebadet</part>
+			<alt-sg>bade</alt-sg>
+		</verb>
+		<verb id="I93" inflection="epenthesis">
+			<stem>laden</stem>
+			<past>lud</past>
+			<part>geladen</part>
+			<alt-sg>läd</alt-sg>
+			<subj2>lüd</subj2>
+		</verb>
+		<verb id="I94">
+			<stem>schenken</stem>
+		</verb>
+		<verb id="I95" inflection="alt. imperative">
+			<stem>sehen</stem>
+			<past>sah</past>
+			<part>gesehen</part>
+			<alt-sg>sieh</alt-sg>
+			<subj2>säh</subj2>
+		</verb>
+		<verb id="I96" inflection="alt. imperative">
+			<stem>geben</stem>
+			<past>gab</past>
+			<part>gegeben</part>
+			<alt-sg>gib</alt-sg>
+			<subj2>gäb</subj2>
+		</verb>
+		<verb id="I110" aux="sein">
+			<stem>kommen</stem>
+			<past>kam</past>
+			<part>gekommen</part>
+			<subj2>käm</subj2>
+		</verb>
+		<verb id="I97">
+			<stem>hören</stem>
+		</verb>
+		<verb id="I98">
+			<stem>enttäuschen</stem>
+			<past>enttäuschte</past>
+			<part>enttäuscht</part>
+		</verb>
+		<verb id="I112">
+			<stem>gedenken</stem>
+			<past>gedachte</past>
+			<part>gedacht</part>
+			<subj2>gedächte</subj2>
+		</verb>
+		<verb id="I99">
+			<stem>vertrauen</stem>
+			<past>vertraute</past>
+			<part>vertraut</part>
+		</verb>
+		<verb id="I111">
+			<stem>schämen</stem>
+		</verb>
+		<verb id="I114">
+			<stem>schlafen</stem>
+			<past>schlief</past>
+			<part>geschlafen</part>
+			<alt-sg>schläf</alt-sg>
+		</verb>
+		<verb id="I113">
+			<stem>scheinen</stem>
+			<past>schien</past>
+			<part>geschienen</part>
+		</verb>
+		<verb id="I115" inflection="alt. imperative">
+			<stem>ziehen</stem>
+			<past>zog</past>
+			<part>gezogen</part>
+			<subj2>zög</subj2>
+		</verb>
+		<verb id="I108">
+			<stem>liegen</stem>
+			<past>lag</past>
+			<part>gelegen</part>
+			<subj2>läg</subj2>
+		</verb>
+		<verb id="I109" inflection="ern/eln">
+			<stem>bedauern</stem>
+			<past>bedauerte</past>
+			<part>bedauert</part>
+		</verb>
+		<verb id="I81" inflection="alt. imperative">
+			<stem>brechen</stem>
+			<past>brach</past>
+			<part>gebrochen</part>
+			<alt-sg>brich</alt-sg>
+			<subj2>bräch</subj2>
+		</verb>
+		<verb id="I82">
+			<stem>verdienen</stem>
+			<past>verdiente</past>
+			<part>verdient</part>
+		</verb>
+		<verb id="I80" aux="sein">
+			<stem>bleiben</stem>
+			<past>blieb</past>
+			<part>geblieben</part>
+		</verb>
+		<verb id="I85">
+			<stem>sagen</stem>
+		</verb>
+		<verb id="I86" aux="sein">
+			<stem>entgleisen</stem>
+			<past>entgleiste</past>
+			<part>entgleist</part>
+		</verb>
+		<verb id="I83">
+			<stem>untersuchen</stem>
+			<past>untersuchte</past>
+			<part>untersucht</part>
+		</verb>
+		<verb id="I84">
+			<stem>wählen</stem>
+		</verb>
+		<verb id="I89">
+			<stem>bringen</stem>
+			<past>brachte</past>
+			<part>gebracht</part>
+			<subj2>brächte</subj2>
+		</verb>
+		<verb id="I103" inflection="ern/eln elision">
+			<stem>sammeln</stem>
+		</verb>
+		<verb id="I102" inflection="modal">
+			<stem>wissen</stem>
+			<past>wusste</past>
+			<part>gewusst</part>
+			<alt-sg>weiß</alt-sg>
+			<subj2>wüsste</subj2>
+		</verb>
+		<verb id="I87" aux="sein">
+			<stem>laufen</stem>
+			<past>lief</past>
+			<part>gelaufen</part>
+			<alt-sg>läuf</alt-sg>
+		</verb>
+		<verb id="I101" inflection="ern/eln">
+			<stem>steigern</stem>
+		</verb>
+		<verb id="I88">
+			<stem>kaufen</stem>
+		</verb>
+		<verb id="I100">
+			<stem>drohen</stem>
+		</verb>
+		<verb id="I107">
+			<stem>machen</stem>
+		</verb>
+		<verb id="I106">
+			<stem>holen</stem>
+		</verb>
+		<verb id="I105" inflection="alt. imperative">
+			<stem>helfen</stem>
+			<past>half</past>
+			<part>geholfen</part>
+			<alt-sg>hilf</alt-sg>
+			<subj2>hülf</subj2>
+		</verb>
+		<verb id="I104">
+			<stem>trainieren</stem>
+			<past>trainierte</past>
+			<part>trainiert</part>
+		</verb>
+		<verb id="I79">
+			<stem>führen</stem>
+		</verb>
+		<verb id="I78">
+			<stem>freuen</stem>
+		</verb>
+		<verb id="I77">
+			<stem>fragen</stem>
+		</verb>
+		<verb id="I76" aux="sein">
+			<stem>fallen</stem>
+			<past>fiel</past>
+			<part>gefallen</part>
+			<alt-sg>fäll</alt-sg>
+		</verb>
+	</Verbs>
+</Lexicon>

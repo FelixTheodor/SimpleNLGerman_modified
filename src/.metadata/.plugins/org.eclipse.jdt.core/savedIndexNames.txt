@@ -1,0 +1,1 @@
+INDEX VERSION 1.126+E:\Dokumente\Studium\Forschungsprojekt\simplenlg-v38\simplenlg-src-3.8\.metadata\.plugins\org.eclipse.jdt.core
